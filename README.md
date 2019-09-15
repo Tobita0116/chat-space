@@ -29,7 +29,7 @@
 ### Association
 - belong_to :post
 - has_many :user_groups
-- has_many :user, through: :groups_user
+- has_many :user, through: :groups_users
 
 ## user_groups table
 |Column|Type|Options|
