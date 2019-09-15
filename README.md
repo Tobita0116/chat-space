@@ -5,8 +5,8 @@
 |email|string|null: false|
 |password|string|null: false|
 |username|string|null: false|
-|post_id|integer|null: false, foreign_key: true|
-|user_group_id|integer|null: false, foreign_key: true|
+|post_id|references|null: false, foreign_key: true|
+|user_group_id|references|null: false, foreign_key: true|
 ### Association
 - has_many :post
 - has_many :group
@@ -16,9 +16,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|img|integer|foreign_key: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|img|string| |
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -27,9 +27,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |group_name|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|user_group_id|integer|null: false, foreign_key: true|
+|post_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|user_group_id|references|null: false, foreign_key: true|
 ### Association
 - has_many :user
 - belongs_to :post
@@ -38,8 +38,8 @@
 ## user_groups table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
