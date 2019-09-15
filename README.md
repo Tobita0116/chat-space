@@ -26,7 +26,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_group_id|references|null: false, foreign_key: true|
 ### Association
 - belong_to :post
 - has_many :user_group
