@@ -5,12 +5,11 @@
 |email|string|null: false|
 |password|string|null: false|
 |username|string|null: false|
-|post_id|references|null: false, foreign_key: true|
-|user_group_id|references|null: false, foreign_key: true|
 ### Association
-- has_many :post
-- has_many :group
-- has_many :user_group
+- has_many :posts
+- has_many :user_groups
+- has_many :groups, through: :groups_users
+
 
 ## posts table
 |Column|Type|Options|
@@ -27,19 +26,17 @@
 |Column|Type|Options|
 |------|----|-------|
 |group_name|text|null: false|
-|post_id|references|null: false, foreign_key: true|
-|user_id|references|null: false, foreign_key: true|
 |user_group_id|references|null: false, foreign_key: true|
 ### Association
-- has_many :user
 - belongs_to :post
 - has_many :user_group
+- has_many :user, through: :groups_user
 
 ## user_groups table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
