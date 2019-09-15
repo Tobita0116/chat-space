@@ -53,6 +53,7 @@ Things you may want to cover:
 |post_id|integer|null: false, foreign_key: true|
 |user_group_id|integer|null: false, foreign_key: true|
 ### Association
+
 - belongs_to :post
 - has_many :user_group
 ## user_groups table
