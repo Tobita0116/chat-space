@@ -35,7 +35,6 @@ Things you may want to cover:
 ### Association
 - has_many :posts
 - has_many :user_group
-
 ## posts table
 |Column|Type|Options|
 |------|----|-------|
@@ -46,7 +45,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :group
-
 ## groups table
 |Column|Type|Options|
 |------|----|-------|
@@ -56,8 +54,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :post
 - has_many :user_group
-
-
 ## user_groups table
 |Column|Type|Options|
 |------|----|-------|
