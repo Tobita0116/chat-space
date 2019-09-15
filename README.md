@@ -19,8 +19,8 @@
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
-- belongs_to :group
+- belong_to :user
+- belong_to :group
 
 ## groups table
 |Column|Type|Options|
@@ -28,7 +28,7 @@
 |group_name|text|null: false|
 |user_group_id|references|null: false, foreign_key: true|
 ### Association
-- belongs_to :post
+- belong_to :post
 - has_many :user_group
 - has_many :user, through: :groups_user
 
@@ -38,5 +38,5 @@
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
-- belongs_to :group
+- belong_to :user
+- belong_to :group
