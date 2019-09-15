@@ -25,7 +25,7 @@
 ## groups table
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false|
+|name|string|null: false|
 |user_group_id|references|null: false, foreign_key: true|
 ### Association
 - belong_to :post
