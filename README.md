@@ -27,7 +27,7 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- belong_to :post
+- has_many :posts
 - has_many :user_groups
 - has_many :user, through: :groups_users
 
