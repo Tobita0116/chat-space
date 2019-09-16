@@ -14,7 +14,7 @@
 ## posts table
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
 |img|string| |
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
