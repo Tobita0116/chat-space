@@ -1,0 +1,60 @@
+.wrapper
+  .sidebar
+    .side_header
+      .header__username
+        USER NAME
+        .side-header_box_menu
+          .side-header_box_menu__new
+            %i.fa.fa-edit
+          .side-header_box_menu__edit
+            %i.fa.fa-cog
+    .groups
+      .group
+        .group_name
+          スレッド名1
+        .group_text
+          見出しテキスト1
+      .group
+        .group_name
+          スレッド名2
+        .group_text
+          見出しテキスト2
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          GROUP
+        %ul.main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member
+            USER1
+          %li.main-header__left-box__member-list__member
+            USER2
+      .main-header__edit-btn 
+        Edit
+    .messages
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker
+            USER1
+          %p.message__upper-info__date
+            9999/99/99(Mon) 99:99:99
+        %p.message__text
+          aaaaaaaaaaaaaaaa
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker
+            USER2
+          %p.message__upper-info__date
+            9999/99/99(Mon) 99:99:99
+        %p.message__text
+          aaaaaaaaaaaaaaa
+    .form
+      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1420/messages", :enctype => "multipart/form-data", :method => "post"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        %input{:name => "authenticity_token", :type => "hidden", :value => "jJovN8NTEPalorVSkeTVJ8pypESmvjJdrOxcSJMQy3rMmkz17QU4ORHdeX6ha2GsIPVn9MjDo9WjEuORzYoE7A=="}/
+        .input-box
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label.input-box__image{:for => "message_image"}
+            %i.fa.fa-image
+        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
