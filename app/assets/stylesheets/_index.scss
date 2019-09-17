@@ -22,11 +22,11 @@
       }
       .side-header_box_menu{
         display: flex;
-        .side-header_box_menu__new{
+        &__side-header_box_menu__new{
           margin-left: 0.3rem;
           float: left;
         }
-        .side-header_box_menu__edit{
+        &__side-header_box_menu__edit{
           margin-left: 0.3rem;
         }
       }
@@ -70,7 +70,7 @@
           display: flex;
           font-size: 12px;
           color: #999999;
-          .main-header__left-box__member-list__member{
+          &__main-header__left-box__member-list__member{
             margin-left: 0.3rem;
           }
         }
@@ -96,12 +96,12 @@
         .message__upper-info{
           display: flex;
           margin-bottom: 10px;
-          .message__upper-info__talker{
+          &__message__upper-info__talker{
             color: #434a54;
             font-size: 16px;
             font-weight: bold;
           }
-          .message__upper-info__date{
+          &__message__upper-info__date{
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
@@ -118,20 +118,19 @@
       height: 90px;
       padding: 20px 40px;
       background-color: #ddd;   
-      
       .new_message{
         display: flex;
         .input-box{
           position: relative;
           width: 100%;
-          .input-box__text{
+          &__input-box__text{
             height: 50px;
             width: 100%;
             padding: 0 10px 0 10px;
             color: #434a54;
             border-style: none;
           }
-          .input-box__image{
+          &__input-box__image{
             font-size: 1.3rem;
             position: absolute;
             top: 10px;
