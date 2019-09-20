@@ -1,5 +1,8 @@
-@import "./reset";
 @import "font-awesome";
+@import "./_colors";
+@import "./_flash";
+@import "./_reset";
 
-@import "./index";
-
+@import "./_index";
+@import "./_user";
+@import "./_group";
