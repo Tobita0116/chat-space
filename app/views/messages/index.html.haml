@@ -2,11 +2,13 @@
   .sidebar
     .side_header
       .header__username
-        USER NAME
-        .side-header_box_menu
-          .side-header_box_menu__side-header_box_menu__new
+        = current_user.name
+      .side-header_box_menu
+        .side-header_box_menu__side-header_box_menu__new
+          -# = link_to "#" do
             %i.fa.fa-edit
-          .side-header_box_menu__side-header_box_menu__edit
+        .side-header_box_menu__side-header_box_menu__edit
+          -# = link_to "new" do
             %i.fa.fa-cog
     .groups
       .group
@@ -33,28 +35,12 @@
       .main-header__edit-btn 
         Edit
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__message__upper-info__talker
-            USER1
-          %p.message__upper-info__message__upper-info__date
-            9999/99/99(Mon) 99:99:99
-        %p.message__text
-          aaaaaaaaaaaaaaaa
-      .message
-        .message__upper-info
-          %p.message__upper-info__message__upper-info__talker
-            USER2
-          %p.message__upper-info__message__upper-info__date
-            9999/99/99(Mon) 99:99:99
-        %p.message__text
-          aaaaaaaaaaaaaaa
+      = render @messages
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1420/messages", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "jJovN8NTEPalorVSkeTVJ8pypESmvjJdrOxcSJMQy3rMmkz17QU4ORHdeX6ha2GsIPVn9MjDo9WjEuORzYoE7A=="}/
-        .input-box
-          %input#message_content.input-box__input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__input-box__image{:for => "message_image"}
-            %i.fa.fa-image
-        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

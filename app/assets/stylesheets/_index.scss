@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
 }
+
 .wrapper{
   margin: 0;
   padding: 0;
@@ -25,9 +26,15 @@
         &__side-header_box_menu__new{
           margin-left: 0.3rem;
           float: left;
+          .fa.fa-edit{
+            color: #ddd;
+          }
         }
         &__side-header_box_menu__edit{
           margin-left: 0.3rem;
+          .fa.fa-cog{
+            color: #ddd;
+          }
         }
       }
     }
@@ -38,12 +45,14 @@
       .group{
         padding-bottom: 40px;
       }
-      .group_name{
+      .group__name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: #ddd; 
       }
-      .group_text{
+      .group__text{
         font-size: 11px;
+        color: #ddd;
       }
     }  
   }
