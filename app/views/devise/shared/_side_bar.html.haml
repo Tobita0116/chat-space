@@ -4,10 +4,10 @@
       = current_user.name
     .side-header_box_menu
       .side-header_box_menu__side-header_box_menu__new
-        = link_to "groups/new" do
+        = link_to new_group_path do
           %i.fa.fa-edit
       .side-header_box_menu__side-header_box_menu__edit
-        = link_to "users/edit" do
+        = link_to edit_user_path(current_user.id) do
           %i.fa.fa-cog
   .groups
     - current_user.groups.each do |group|
@@ -16,4 +16,4 @@
           .group__name
             = group.name
           .group__text
-            メッセージはまだありません。
+            = group.show_last_message
