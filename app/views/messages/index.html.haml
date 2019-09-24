@@ -1,43 +1,20 @@
 .wrapper
-  .sidebar
-    .side_header
-      .header__username
-        = current_user.name
-      .side-header_box_menu
-        .side-header_box_menu__side-header_box_menu__new
-          -# = link_to "#" do
-            %i.fa.fa-edit
-        .side-header_box_menu__side-header_box_menu__edit
-          -# = link_to "new" do
-            %i.fa.fa-cog
-    .groups
-      .group
-        .group_name
-          スレッド名1
-        .group_text
-          見出しテキスト1
-      .group
-        .group_name
-          スレッド名2
-        .group_text
-          見出しテキスト2
+  = render 'devise/shared/side_bar'
   .chat-main
     .main-header
       .left-box
         %h2.current-group
-          GROUP
+          = @group.name
         %ul.left-box__member-list
           Member：
           %li.member
             USER1
-          %li.member
-            USER2
       .main-header__edit-btn 
         Edit
     .messages
       = render @messages
     .form
-      = form_for [@group, @messages] do |f|
+      = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
