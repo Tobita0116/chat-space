@@ -1,46 +1,56 @@
 .wrapper
-  .sidebar
-    .side_header
-      .header__username
-        = current_user.name
-      .side-header_box_menu
-        .side-header_box_menu__side-header_box_menu__new
-          -# = link_to "#" do
-            %i.fa.fa-edit
-        .side-header_box_menu__side-header_box_menu__edit
-          -# = link_to "new" do
-            %i.fa.fa-cog
-    .groups
-      .group
-        .group_name
-          スレッド名1
-        .group_text
-          見出しテキスト1
-      .group
-        .group_name
-          スレッド名2
-        .group_text
-          見出しテキスト2
-  .chat-main
-    .main-header
-      .left-box
-        %h2.current-group
-          GROUP
-        %ul.left-box__member-list
+
+  = render 'shared/side_bar'
+
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
           Member：
           %li.member
-            USER1
+            メンバー名
           %li.member
-            USER2
-      .main-header__edit-btn 
-        Edit
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
     .messages
-      = render @messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
     .form
-      = form_for [@group, @messages] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      %form
+        %input.form__message
         .form__mask
-          = f.label :image, class: 'form__mask__image' do
+          %label.form__mask__image
             = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
