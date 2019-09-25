@@ -8,7 +8,8 @@
         %ul.left-box__member-list
           Member：
           %li.member
-            USER1
+            - @group.users.each do |user|
+              = user.name
       .main-header__edit-btn 
         Edit
     .messages

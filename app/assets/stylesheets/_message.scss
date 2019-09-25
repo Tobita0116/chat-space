@@ -1,20 +1,20 @@
 .message{
-  padding-bottom: 40px;
-  .message__upper-info{
+  padding-bottom: 400px;
+  .upper-message{
     display: flex;
     margin-bottom: 10px;
-    &__message__upper-info__talker{
+    &__user-name{
       color: #434a54;
       font-size: 16px;
       font-weight: bold;
     }
-    &__message__upper-info__date{
+    &__date{
       color: #999999;
       font-size: 12px;
       margin-left: 10px;
     }
   }
-  .message__text{
+  .lower-message{
     color: #434a54;
     font-size: 14px;
     margin-bottom: 10px;

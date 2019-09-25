@@ -17,7 +17,8 @@ class UsersController < ApplicationController
       format.html
       format.json
     end
-
+  end
+  
   private
 
   def user_params
