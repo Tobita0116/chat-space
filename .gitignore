@@ -9,11 +9,11 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
 !/log/.keep
-!/tmp/.keep
+/image
+/tmp
 
 # Ignore Byebug command history file.
 .byebug_history
 
-uploads/
+public/uploads/
