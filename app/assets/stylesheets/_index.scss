@@ -98,7 +98,7 @@
     .messages{
       height: calc(100vh - 190px);
       padding: 46px 40px;
-      background-color: #eee;
+      background-color: #fafafa;
       overflow: scroll;
       .message{
         padding-bottom: 40px;
@@ -123,40 +123,40 @@
         }
       }
     }
-    .form{
+    .form {
+      background-color: #DDDDDD;
+      box-sizing: border-box;
       height: 90px;
-      padding: 20px 40px;
-      background-color: #ddd;   
-      .new_message{
-        display: flex;
-        .input-box{
-          position: relative;
-          width: 100%;
-          &__input-box__text{
-            height: 50px;
-            width: 100%;
-            padding: 0 10px 0 10px;
-            color: #434a54;
-            border-style: none;
-          }
-          &__input-box__image{
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-          }
+      padding: 20px 50px 20px 40px;
+      &__message {
+        border: none;
+        float: left;
+        height: 50px;
+        width: calc(100% - 150px);
+      }
+      &__mask {
+        background-color: $white;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .hidden {
+          display: none;
         }
       }
-      .submit-btn{
-        width: 100px;
+      &__submit {
+        background-color: $light_blue;
+        border: none;
+        color: $white;
+        float: right;
+        font-size: 16px;
         height: 50px;
-        padding: 0 30px;
         margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
-        }
+        padding: 0 30px;
       }
     }
   }
+}

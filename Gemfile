@@ -68,3 +68,6 @@ gem 'faker'
 group :test, :development do 
   gem 'capybara'
 end
+
+gem 'pry-rails'
+
