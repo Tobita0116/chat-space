@@ -43,7 +43,7 @@ test:
 #   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
-#a
+#
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
@@ -51,5 +51,5 @@ production:
   <<: *default
   database: chat-space_production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: <%= ENV['373643265c4a6a857838d7c5d661d110ffc151c9da69e59a6dec78f6d0dbd9893e0029c8c3132e5c07ed3587adb89cc8716b92e7d0585839ec553a05e10ccfaa'] %>
   socket: /var/lib/mysql/mysql.sock
