@@ -86,3 +86,6 @@ Rails.application.configure do
 end
 
 # config.assets.js_compressor = :uglifier
+
+server '3.112.161.6', user: 'ec2-user', roles: %w{app db web}
+
