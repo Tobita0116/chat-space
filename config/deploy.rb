@@ -38,16 +38,6 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-require "capistrano/setup"
-require "capistrano/deploy"
-require 'capistrano/rbenv'
-require 'capistrano/bundler'
-require 'capistrano/rails/assets'
-require 'capistrano/rails/migrations'
-require 'capistrano3/unicorn'
-
-Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
-
 	
 lock '3.11.2'
 
