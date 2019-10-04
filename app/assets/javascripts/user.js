@@ -47,12 +47,12 @@ $(function() {
         alert('error');
       });
     });
-  
 
     $(document).on("click", ".user-search-add", function() {
       let userbox = $(this).parent();
       userbox.remove();
       let userdata = $(this).data();
+      console.log(userdata)
       deleteuser(userdata);
     });
 
