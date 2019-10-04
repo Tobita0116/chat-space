@@ -61,7 +61,6 @@ $(function(){
   })
   
   .done(function(data){
-    console.log(data)
     var insertHTML = '';
     data.forEach(function(message){
     insertHTML = buildHTML(message);         

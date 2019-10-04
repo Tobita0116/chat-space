@@ -52,7 +52,6 @@ $(function() {
       let userbox = $(this).parent();
       userbox.remove();
       let userdata = $(this).data();
-      console.log(userdata)
       deleteuser(userdata);
     });
 
