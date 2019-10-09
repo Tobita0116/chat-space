@@ -3,7 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|password|string|null: false|
+|password||null: false|
 |name|string|null: false, index: true|
 ### Association
 - has_many :posts
